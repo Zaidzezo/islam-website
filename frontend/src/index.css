@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.4; 
+  font-weight: 400;
+  font-size: 12px; 
+  --bg-primary: #f8f6f0;
+  --bg-secondary: #f5f3ee;
+  --bg-tertiary: #ede8d8;
+  --bg-elevated: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #6e6e6e;
+  --accent-gold: #c9a961;
+  --accent-gold-light: #d4af37;
+  --accent-gold-dark: #b8954a;
+  --accent-brown: #8b6914;
+  --accent-green: #2d5016;
+  --border-color: rgba(201, 169, 97, 0.2);
+}
+
+.arabic-text {
+  font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+  line-height: 1.6; 
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 169, 97, 0.4);
+  border-radius: 3px;
+  border: 1px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 169, 97, 0.6);
+}
+
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 10px rgba(201, 169, 97, 0.1);
+}
+
+@media (min-width: 1536px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 11px;
+  }
+  
+  .arabic-text {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 9px;
+  }
+  
+  .arabic-text {
+    line-height: 1.4;
+  }
+}
